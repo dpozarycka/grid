@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family:'Segoe UI';
+}
+
+.grid {
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "title"
+    "main"
+    "aside"
+    "footer";
+}
+    
+header {
+    display: grid;
+    background: #262427;
+    padding: 10px;
+}
+
+header > img {
+    align-items: center;
+    justify-content: center;
+    height: 150px;
+    margin: auto;
+    padding-top: 10px;
+}
+header > h2 {
+    display: flex;
+    color: #e7ab46;
+    text-transform: uppercase;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+header > p {
+    display: flex;
+    color: #a8a7a9;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.title {
+    display: flex;
+    background: url(line.png);
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    color: #404040;
+}
+
+main li:not(:last-of-type) {
+    border-bottom: 1px dotted black;
+    margin: 30px 30px;
+    list-style: none;
+    color: #404040;
+}
+
+main li:last-of-type {
+    margin: 30px 30px;
+    list-style: none;
+    color: #404040;
+}
+
+li > p {
+    color: #404040;
+    padding: 5px 0;
+}
+
+.time {
+    padding-bottom: 20px;
+}
+
+aside li {
+    display: flex;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+aside li:nth-of-type(1) {
+    background: #f1e4d5;
+}
+
+aside li:nth-of-type(2) {
+    background: #e7ab47;
+}
+
+aside li:nth-of-type(3) {
+    background: #68470c;
+}
+
+aside li:nth-of-type(4) {
+    background: #cc9965;
+}
+
+aside li:not(:first-of-type) {
+    color: white;
+}
+
+footer {
+    background: #262427;
+    color: white;
+    padding: 30px;
+}
+
+footer address {
+    padding-top: 30px;
+}
+
+@media (min-width: 400px) and (max-width: 600px) {
+    .grid {
+        grid-template-areas: 
+        "title title"
+        "main header"
+        "main aside"
+        "footer footer"
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1000px) {
+    .grid {
+        grid-template-areas: 
+        "title title title"
+        "main header header"
+        "main aside footer"
+        "main . ."
+    }
+}
